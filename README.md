@@ -37,7 +37,7 @@ Avant d'intégrer `@vicod3x/popup_package` à votre projet, assurez-vous de resp
           <Popup
             isOpen={isOpen}
             onClose={() => setOpen(false)}
-            content={<p>Ceci est le contenu de la popup!</p>}
+            content={MonContenuPerso}
           />
         </div>
       );
