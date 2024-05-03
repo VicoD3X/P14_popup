@@ -1,7 +1,15 @@
 {
   "name": "@vicod3x/popup_package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VicoD3X/P14_popup"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
