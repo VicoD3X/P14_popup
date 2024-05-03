@@ -1,70 +1,107 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# @vicod3x/popup_package
 
-In the project directory, you can run:
+`@vicod3x/popup_package` est une popup légère et personnalisable conçue spécifiquement pour React. Facile à intégrer et à utiliser, elle est parfaite pour enrichir vos applications React avec des interactions dynamiques. Ce package a été développé dans le cadre du projet 14 d'OpenClassrooms.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prérequis
 
-### `npm test`
+Avant d'intégrer `@vicod3x/popup_package` à votre projet, assurez-vous de respecter les conditions suivantes :
+- Node.js (version 12.x ou supérieure)
+- Un éditeur de texte tel que Visual Studio Code, recommandé pour une meilleure intégration avec les outils de développement React.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Ajout du package :** Utilisez la commande suivante dans votre terminal pour installer le package dans votre projet React :
+    ```bash
+    npm install @vicod3x/popup_package
+    ```
 
-### `npm run eject`
+2. **Importation du composant :** Intégrez la popup dans votre application React comme indiqué ci-dessous :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```javascript
+    import React, { useState } from 'react';
+    import Popup from '@vicod3x/popup_package';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    function App() {
+      const [isOpen, setOpen] = useState(false);
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+      return (
+        <div>
+          <button onClick={() => setOpen(true)}>Ouvrir la Popup</button>
+          <Popup
+            isOpen={isOpen}
+            onClose={() => setOpen(false)}
+            content={<p>Ceci est le contenu de la popup!</p>}
+          />
+        </div>
+      );
+    }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    export default App;
+    ```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Propriétés
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Le composant `Popup` accepte les propriétés suivantes pour une personnalisation facile :
 
-### Making a Progressive Web App
+- `isOpen` (booléen) : Contrôle la visibilité de la popup.
+- `onClose` (fonction) : Fonction appelée pour fermer la popup.
+- `content` (élément React) : Contenu affiché à l'intérieur de la popup.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Personnalisation des styles
 
-### `npm run build` fails to minify
+Personnalisez l'apparence de votre popup en modifiant le fichier `index.css` inclus dans le package. Vous pouvez également ajouter vos propres classes CSS pour adapter les styles par défaut à vos besoins.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## Contribuer
+
+Nous encourageons la contribution à ce projet ! Pour contribuer, fork le dépôt GitHub, apportez vos modifications et soumettez une pull request.
+
+
+
+
+## Licence
+
+`@vicod3x/popup_package` est distribué sous la licence MIT, autorisant une utilisation libre et ouverte du logiciel. Pour plus de détails, consultez le fichier LICENSE inclus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
